@@ -14,22 +14,21 @@ console.log(fullPrice);
 //se passeggero ha età strettamente minore di 18 il prezzo ha 20% di sconto
 //se passeggero ha età strettamente superiore a 65 anni il prezzo ha 40% di sconto
 //stampa prezzo finale con massimo due decimali
+let result = ""
+
 if (age < 18){
     const discount = (fullPrice * 20 / 100);
-    const finalPrice = fullPrice - discount;
-    console.log(finalPrice);
-    const result = finalPrice.toFixed(2);
-}
-
-else if (age > 65){100
+    result = (fullPrice - discount).toFixed(2);
+    console.log(result);    
+    
+} else if (age > 65){100
     const discount = (fullPrice * 40 / 100);
-    const finalPrice = fullPrice - discount;
-    console.log(finalPrice);
-    const result = finalPrice.toFixed(2);
+    result = (fullPrice - discount).toFixed(2);
+    console.log(result);
+        
 } else{
-    finalPrice = fullPrice
-    const result = finalPrice.toFixed(2);
+    result = fullPrice
+    console.log(result);
 }
 
-
-document.getElementById("price").innerHTML = "Il prezzo del biglietto è " + result + "€"; 
+document.getElementById("price").innerHTML = "Il prezzo del biglietto è " + result + "€";   
